@@ -2,7 +2,7 @@ Smart Task Manager – Microservices Project
 A microservices-based task management system built with Spring Boot, Spring Cloud, Kafka, and JWT authentication, demonstrating real-world microservice patterns including service discovery, API Gateway routing, inter-service communication, asynchronous notifications, and API documentation.
 
 Project Architecture
-'''
+```
           ┌────────────────────────┐
           │        Clients         │
           │(Postman / External)    │
@@ -25,7 +25,7 @@ User Service                        Task Service
                         - Kafka Listener/Consumer
                         - Triggered on task creation
                         - Sends email notifications
-'''
+```
 
 Tech Stack
 * Backend: Spring Core, MVC, Rest, Data JPA, Spring Boot 3.x, Spring Cloud (Eureka, Gateway, OpenFeign)
@@ -86,7 +86,7 @@ Project Highlights
 * Clean separation of internal vs external service communication
 
 Folder Structure
-'''
+```
 smart-task-manager/
 ├── api-gateway/
 ├── eureka-server/
@@ -94,13 +94,13 @@ smart-task-manager/
 ├── task-service/
 ├── notification-service/
 └── README.md
-'''
+```
 
 Sample Output
 User Service
 
 Register a user:
-'''
+```
 POST /user/register
 Request Body:
 {
@@ -112,10 +112,10 @@ Response:
 {
   User registered successfully
 }
-'''
+```
 
 Login a user (returns JWT):
-'''
+```
 POST /user/login
 Request Body:
 {
@@ -126,12 +126,12 @@ Response:
 {
 eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGFydW5hZGl0aHlhYmFuZGFydUBnbWFpbC5jb20iLCJzdWIiOiJUYXJ1biIsImlhdCI6MTc1NjEzOTYyMywiZXhwIjoxNzU2MTQzMjIzfQ.zXpY23UNHbkrM5F5iELYVQmJEqbHQuPlnyR7LXVLx_I
 }
-'''
+```
 
 Task Service
 
 Create a task:
-'''
+```
 POST /task/createTask
 Headers: Authorization: Bearer <JWT>
 Request Body:
@@ -144,9 +144,10 @@ Response:
 {
   Task is created successfully
 }
+```
 
 Get tasks by userId: (Feign call from user to task service and userId is extracted from jwt token)
-'''
+```
 GET /task/getTasks
 Headers: Authorization: Bearer <JWT>
 Response:
@@ -166,14 +167,14 @@ Response:
         "userId": 2
     }
 ]
-'''
+```
 
 Notification Service
-'''
+```
 Triggered automatically via Kafka:
 Event: TaskCreated
 Email sent to user@example.com: Your task 'Buy Groceries' is successfully created
-'''
+```
 
 Future Improvements
 * Move JWT authentication to API Gateway instead of individually in services
@@ -183,17 +184,17 @@ Future Improvements
 
 Running the Project
 1. Clone the repository:
-'''
+```
 git clone https://github.com/<your-username>/smart-task-manager.git
-'''
-2. Start Kafka (local or Docker).
-3. Run services in order:
+```
+3. Start Kafka (local or Docker).
+4. Run services in order:
     * Eureka Server
     * API Gateway
     * User Service
     * Task Service
     * Notification Service
-4. Access Swagger UI:
+5. Access Swagger UI:
     * User Service: http://localhost:<port>/swagger-ui.html
     * Task Service: http://localhost:<port>/swagger-ui.html
-5. Use Postman / Frontend to call APIs via API Gateway
+6. Use Postman / Frontend to call APIs via API Gateway
