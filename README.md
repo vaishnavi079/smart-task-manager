@@ -114,7 +114,7 @@ POST /user/register
 Request Body:
 {
   "username": "Tarun",
-  "email": "tarunadithyabandaru@gmail.com",
+  "email": "user@example.com",
   "password": "T@run123"
 }
 Response:
@@ -204,6 +204,6 @@ git clone https://github.com/<your-username>/smart-task-manager.git
     * Task Service
     * Notification Service
 5. Access Swagger UI:
-    * User Service: http://localhost:port/swagger-ui.html
-    * Task Service: http://localhost:port/swagger-ui.html
+    * User Service: http://localhost:8090/swagger-ui.html
+    * Task Service: http://localhost:8080/swagger-ui.html
 6. Use Postman / Frontend to call APIs via API Gateway
