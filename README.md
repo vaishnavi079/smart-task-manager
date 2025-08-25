@@ -194,7 +194,7 @@ Future Improvements
 Running the Project
 1. Clone the repository:
 ```
-git clone https://github.com/<your-username>/smart-task-manager.git
+git clone https://github.com/vaishnavi079/smart-task-manager.git
 ```
 3. Start Kafka (local or Docker).
 4. Run services in order:
