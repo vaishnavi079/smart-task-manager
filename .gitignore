@@ -1,8 +1,12 @@
-# Compiled class file
+### Java ###
 *.class
+*.war
+*.ear
+*.jar
 
-# Log file
+# Generated files
 *.log
+*.ctxt
 
 # BlueJ files
 *.ctxt
@@ -10,14 +14,52 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
+# Package Files
 *.zip
 *.tar.gz
 *.rar
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+out/
+
+### Eclipse ###
+.project
+.classpath
+.c9/
+.settings/
+.loadpath
+.factorypath
+
+### Logs ###
+logs/
+*.log
+
+### OS files ###
+.DS_Store
+Thumbs.db
+
+### Kafka / DB ###
+# In case you run Kafka or DB locally and have temp files
+kafka-logs/
+mysql-data/
+
+### Other ###
+*.swp
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
