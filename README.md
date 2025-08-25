@@ -105,6 +105,7 @@ smart-task-manager/
 ```
 
 Sample Output
+
 User Service
 
 Register a user:
