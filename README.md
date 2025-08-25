@@ -204,6 +204,6 @@ git clone https://github.com/<your-username>/smart-task-manager.git
     * Task Service
     * Notification Service
 5. Access Swagger UI:
-    * User Service: http://localhost:<port>/swagger-ui.html
-    * Task Service: http://localhost:<port>/swagger-ui.html
+    * User Service: http://localhost:port/swagger-ui.html
+    * Task Service: http://localhost:port/swagger-ui.html
 6. Use Postman / Frontend to call APIs via API Gateway
