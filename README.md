@@ -66,6 +66,7 @@ Endpoints
 User Service
 * POST /user/register – Register a new user
 * POST /user/login – Login and get JWT
+
 Task Service
 * POST /task/createTask – Create a new task
 * PUT /task/update – Update a task
@@ -74,6 +75,7 @@ Task Service
 * DELETE /task/delete/{id} – Delete task by task Id
 * GET /task/getTasks – Feign endpoint 
 * DELETE /task/deleteTasks – Feign endpoint
+
 Notification Service
 * Kafka listener only; no public REST endpoints
 
