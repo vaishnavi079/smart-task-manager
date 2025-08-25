@@ -1,4 +1,5 @@
 Smart Task Manager – Microservices Project
+
 A microservices-based task management system built with Spring Boot, Spring Cloud, Kafka, and JWT authentication, demonstrating real-world microservice patterns including service discovery, API Gateway routing, inter-service communication, asynchronous notifications, and API documentation.
 
 Project Architecture
@@ -36,27 +37,32 @@ Tech Stack
 * Database: MySql
 
 Features
+
 User Service
 * User registration and login (only these APIs are unauthenticated)
 * All other APIs require JWT authentication
 * Feign client to communicate with Task Service
 * Swagger API documentation available
+
 Task Service
 * CRUD operations for tasks
 * JWT validated for all APIs
 * Extracts userId from JWT for task ownership
 * Feign endpoints for User Service calls (getTasksByUserId, deleteTasksByUserId)
 * Swagger API documentation available
+
 Notification Service
 * Listens to Kafka topic for new task creation events
 * Sends email notifications when a new task is created
 * Fully asynchronous, triggered only by Task Service
+
 API Gateway
 * Routes all external requests to the corresponding service
 * Provides a single entry point for external clients
 * Eureka service discovery enabled for dynamic routing
 
 Endpoints
+
 User Service
 * POST /user/register – Register a new user
 * POST /user/login – Login and get JWT
